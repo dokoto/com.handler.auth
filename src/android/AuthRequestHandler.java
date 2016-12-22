@@ -1,6 +1,7 @@
 package com.handler.auth;
 
 import org.apache.cordova.*;
+import android.os.Build.*;
 
 public class AuthRequestHandler extends CordovaPlugin {
     final String jsCommand = "cordova.fireWindowEvent('crosswalk.auth_request');";
