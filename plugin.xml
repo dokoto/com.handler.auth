@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="com.handler.auth" version="0.0.1">
+
+    <name>Authentication handler</name>
+    <description>Handle basic auth request</description>
+
+    <license>Apache 2.0</license>
+    <keywords>authentication, http, basic, base64</keywords>
+    <repo>https://github.com/dokoto/com.handler.auth</repo>
+    <issue>https://github.com/dokoto/com.handler.auth/issues</issue>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="auth">
+                <param name="android-package" value="com.handler.auth.AuthRequestHandler"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        <source-file src="src/android/AuthRequestHandler.java" target-dir="src/com/handler/auth" />
+    </platform>
+
+</plugin>
